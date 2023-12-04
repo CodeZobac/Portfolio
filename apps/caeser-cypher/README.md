@@ -12,7 +12,7 @@ Features:
     -Interactive CLI: User-friendly command-line interface for seamless interaction and operation.
     -Custom Shift Value: Allows users to specify the shift value (number of positions letters are moved) for customized encryption and decryption.
 
-Usage
+Usage:
 
     -Run the Script: Launch the script in a Python interpreter.
     -Choose Mode: Select 'encode' to encrypt or 'decode' to decrypt a message.
