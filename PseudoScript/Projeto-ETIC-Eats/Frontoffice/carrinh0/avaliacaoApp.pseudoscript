@@ -1,0 +1,15 @@
+funcao avaliacaoApp():  
+    entrada(“Pretende deixar a sua avaliacao da nossa App S/N?” , avaliacao)
+
+    listaAvaliacaoApp = ( )
+
+    se avaliacao = ‘S’
+      entrada(“De 1 a 5 estrelas , qual é a sua opnião” , opiniao)    
+      entrada(“Deixe o seu comentario:   ”, comentario)
+    
+      listaAvaliacaoApp.add(opiniao, comentario)
+      imprime(“Obrigado pela sua opinião”)
+
+
+    senao  
+      imprime(“Obrigado pela preferência”)

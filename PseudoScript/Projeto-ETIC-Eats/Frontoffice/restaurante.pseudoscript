@@ -1,0 +1,28 @@
+importar carrinho/carrinhoPrincipal como carrinho
+
+modelo restaurante:
+  construtor()
+    restaurante.Nome = ()
+    restaurante.menu = ()
+
+  Menus[]
+funcao EscolhaRestaurante():
+
+  entrada("Digita o nome do restaurate:" , NomeRestaurante)
+    se NomeRestaurante esta em restaurante.Nome
+      MenuRestaurente()
+    senao:
+      imprime("Esse restaurante não esta desponivel na aplicação")
+
+funcao MenuRestaurente()
+
+    imprime("{restaurante.menu}")
+    entrada("Qual é o menu que pretende selecionar" , opcao)
+        Carrinho.add(opcao)
+
+    entrada("Pretende adicionar outro menu ao carinho s/n?" , outromenu)
+    se outromenu = s
+        MenuRestaurente()
+        
+    se outromenu = n
+        carrinho()
