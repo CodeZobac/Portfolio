@@ -1,0 +1,20 @@
+importar carrinhoPrincipal como carrinho
+importar login 
+importar restaurante
+
+
+imprime ("Bem vindo a a nossa app EticEats!")
+
+entrada(“Tem conta? s/n”, conta)
+
+if (conta==’n’):
+    funcao.criarUser()
+
+
+else
+    entrada(“Informe seu email: “, email)
+    entrada(“Informe a sua senha: “, senha)
+    função.login(email, senha)
+    imprime("Bem vindo {Users.usuario.nome}")
+    restaurante()
+ 

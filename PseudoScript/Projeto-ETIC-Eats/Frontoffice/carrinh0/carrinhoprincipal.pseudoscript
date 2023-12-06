@@ -1,0 +1,59 @@
+importar alterarPedido como alterarPedido
+
+funcao carrinho (restaurante.nome, menu)
+
+  carrinho = ()
+  cada menu.nome em menu.NomeRestaurante
+  carrinho.add({menu.receita} - {menu.valor})
+
+
+  imprime (“Menu escolhido: {menu.nome} -> valor {menu.valor}“)
+
+  entrada (“Deseja alterar seu pedido? (S/N) “, alterarPedido)
+  if  alterarPedido != ‘s’:
+      entrada("Selecione o pedido que deseja alterar: ", pedido)
+      alterarPedido(pedido)
+
+  else:
+
+  entrada(“Deseja alterar a morada de entrega? (s/n)”, auxMorada)
+
+  cont = 40 #Quantidade MAXIMA de minutos, já pré-definida, para o tempo de entrega do pedido
+
+  if(auxMorada == ‘s’)	##Caso o cliente queira alterar a morada do pedido de entrega 
+    entrada(“Informe a nova morada: “, moradaEntrega)
+    imprime (“Morada confirmada!”)
+    imprime (“Pagamento confirmado!”)
+    imprime (“Pedido a caminho!”) 
+
+
+      while (cont >= 0)
+        imprime (“Chega em {cont} minutos”) 
+        cont = cont - 10
+  
+      entrada(“Pedido chegou? (s/n) “ confirmacao) 
+
+      if (confirmacao == ‘s’)
+        avaliacaoPedido()
+
+      else
+        imprime(“Entre em contato com o restaurante”)
+
+
+else  ## Caso o cliente nao queira alterar a morada do pedido de entrega
+      imprime (“Morada confirmada!”)
+      imprime (“Pagamento confirmado!”)
+      imprime (“Pedido a caminho!”) 
+
+
+    while (cont >= 0)
+      imprime (“Chega em {cont} minutos”) 
+      cont = cont - 10
+
+    entrada("Pedido chegou?", fimPedido)
+      
+    if(fimPedido == 'S')
+      avaliacaoPedido()
+
+    else
+      imprime("Entre em contato com o restaurante!")
