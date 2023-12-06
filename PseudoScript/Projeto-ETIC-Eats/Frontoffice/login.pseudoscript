@@ -1,0 +1,78 @@
+#Miguel Sousa
+funcao criarUser (email) :
+    numeroUser = Users.usuarios.tamanho()
+    Users.usuarios[numeroUser] = (email-> email, 
+                                morada -> [],
+                                nome : “”, 
+                                senha -> “”, 
+                                numeroTele -> 123,
+                                historico -> []
+                                )
+
+funcao verificaEmail (email):
+    contador = 0
+    tamanhoUsers = Users.usuarios.tamanho ()
+
+    enquanto contador < tamanhoUsers :
+        se email == Users.usuarios[contador].email :
+            retorna true
+
+        contador ++
+    retorna falso
+
+funcao verificaNome (nome):
+    contador = 0
+    tamanhoUsers = Users.usuarios.tamanho ()
+
+    enquanto contador < tamanhoUsers :
+        se nome == Users.usuarios[contador].nome :
+            retorna true
+
+        contador ++
+    retorna falso
+#MC
+
+funcao verificaNumeroTele (numeroTele):
+    contador = 0
+    tamanhoUsers = Users.usuarios.tamanho ()
+
+    enquanto contador < tamanhoUsers :
+        se numeroTele == Users.usuarios[contador].numeroTele :
+            retorna true
+
+        contador ++
+    retorna falso
+
+funcao cadastro () :
+    entrada ("qual o email da nova conta ? ", email)
+
+
+    se verificaEMail (email) == falso :
+        entrada ("qual sera o seu nome de usuario ?", nome)
+        entrada ("qual sera o seu numero ?", tele)
+
+        Users.criarUser (email)
+
+        entrada ("qual sera a sua senha ?", senha)
+        entrada ("qual sera a sua morada ?", morada)
+        ultimoLugarDaMorada = Users.usuario[Users.usuarios.tamanho() - 1].morada.tamanho() -1
+
+        Users.usuario[Users.usuarios.tamanho() - 1].nome = nome
+        Users.usuario[Users.usuarios.tamanho() - 1].senha = senha
+        Users.usuario[Users.usuarios.tamanho() - 1].morada[ultimoLugarDaMorada] = morada 
+        Users.usuario[Users.usuarios.tamanho() - 1].numeroTele = tele
+
+        imprime ("cadastro concluido")
+        retorna nulo
+
+    imprime ("esse email já existe ! O que deseja fazer ?")
+    imprime ("m -> voltar ao menu")
+    imprime ("t -> tentar outro email")
+    entrada ("", opcao)
+
+    se opcao == m :
+        Users.menu ()
+    se opcao == t :
+        Users.cadastro ()
+
+    retorna nulo

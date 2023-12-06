@@ -1,0 +1,67 @@
+funcao alterarPedido(pedido[])    -> ## Alteração do carrinho
+
+    imprime ("Opções: 
+              1 - Adicionar ingrediente
+              2 - Remover ingrediente
+              3 - Remover/Cancelar pedido
+              4 - Aumentar quantidade de menu
+              5 - Adicionar outro menu")
+
+    entrada("Opção: ", opcao)
+
+      if (opcao == 1):
+          imprime(menu.itens) ##Funcao mauro
+          entrada("Selecione o item que deseja adicionar: ", itemAdd)
+
+          aux = GestaoPedidos.orders.itens
+              
+              if(itemAdd == 1)
+                    itemNovo[] = item[] + itemAdd #Adiciona o item selecionado ao pedido.                    
+                    imprime("Item adicionado com sucesso!")
+                    retorna itemNovo[]
+
+
+      else if ( opcao == 2): 
+        imprime(GestaoPedidos.order) ##Funcao mauro
+        entrada("Selecione o item que deseja remover: ", itemRemove)
+
+          para cada item em GestaoPedidos.orders
+        
+              if(itemRemove != item)
+                    itemNovo[] = item[] #Remove o item selecionado do pedido
+                    menu.valor = menu.valor - (itemRemove * menu.itens.preco) # Altera o preço do carrinho, removendo o preço do menu excluido
+                    imprime("Item removido com sucesso!")
+                    retorna menu.valor
+
+              else 
+                  imprime ("Item não encontrado!")
+  
+     else if (opcao == 3): 
+      entrada("Informe quantos menus deseja remover do pedido: ", menuMenos): 
+      pedido.qtd = pedido.qtd - menuMenos
+
+      if (pedido.qtd = 0)
+          imprime("Menu removido com sucesso!")
+      else 
+          return pedido.qtd
+
+
+    else if(opcao == 4):
+      entrada("Informe a quantidade de menu que deseja adicionar: ", menuMais)
+      pedido.qtd = pedido.qtd + menuMais
+      menu.valor = menu.valor + (menuMais * menu.itens.preco) # Soma o valor do menu adicionado ao valor já existente no carrinho 
+      imprime ("{menuMais} Adicionado ao seu pedido")
+      return menu.valor
+
+
+    else if (opcao == 5): 
+      imprime ("Escolha o restaurante:")
+      imprime(user.nomeEmpresa)
+
+      if(user.nomeEmpresa == 1)    #Empresa Selecionada
+          if(StatusEmpresa == Aberto)
+              retorna user.nomeEmpresa
+          else
+            while (StatusEmpresa == 'Fechado')
+                imprime("Restaurante fechado!")
+                entrada("Selecione outro restaurante: ", StatusEmpresa)
