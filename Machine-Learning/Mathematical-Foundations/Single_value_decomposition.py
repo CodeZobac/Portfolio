@@ -1,0 +1,11 @@
+import torch
+P = torch.tensor([[25, 2, -5], [3, -2, 1], [5, 7, 4.]])
+U, D, V = torch.linalg.svd(P)
+PPt = torch.matmul(P, P.T)
+lambdas, VP = torch.linalg.eig(PPt)
+PtP = torch.matmul(P.T, P)
+lambdas1, VP1 = torch.linalg.eig(PtP)
+print(U)
+print(VP)
+print(VP1)
+print(V)
