@@ -5,14 +5,26 @@
     <title>Caboz Portfolio</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header id="navbar">
       <a href="#landing-page"><img id="logo" /></a>
       <div id="menu">
-        <a href="#">About</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
+        <a style="cursor: pointer" onclick='myScroll("about", 210)'>About</a>
+        <a style="cursor: pointer" onclick="myScroll('portfolio', 210)">
+          Projects</a
+        >
+        <a style="cursor: pointer" onclick="myScroll('contact', 210)"
+          >Contact</a
+        >
       </div>
     </header>
     <section id="landing-page">
@@ -30,46 +42,135 @@
         <a href="#portfolio"><button>Portfolio</button></a>
       </div>
     </section>
-    <section id="about">
-      <h1 id="title">Get to know me:</h1>
-      <img
-        id="profile-picture"
-        src="Images/Screenshot from 2024-01-10 17-03-44.png"
-      />
-      <div id="text">
-        <p>📍 Studying: Web Programming at ETIC Algarve</p>
-        <p>
-          🌐 My Journey in Tech: Hello! I'm Afonso Caboz, a passionate web
-          developer in the making. At 22, my journey in the tech world is fueled
-          by a relentless drive to innovate and create. Currently, I'm baking my
-          skills in web programming at ETIC Algarve, Faro where I'm not just
-          learning the theories but also putting them into practice.
-        </p>
-        <p>
-          🔍 Why Web Programming? My fascination with web programming stems from
-          its endless possibilities and the joy of turning ideas into reality.
-          The web is a canvas where creativity meets functionality, and I'm
-          excited to be a part of this ever-evolving field.
-        </p>
-        <p>
-          🚀 Future Goals: As I continue my educational journey, my aim is to
-          deepen my knowledge in these technologies and explore new ones. I'm
-          eager to contribute to impactful projects, collaborate with
-          like-minded individuals, and keep growing as a web developer.
-        </p>
+    <main id="main-content">
+      <section id="about">
+        <h1 id="title">Get to know me:</h1>
+        <img id="background-h1" src="Images/Group 36.png" />
+        <img
+          id="profile-picture"
+          src="Images/Screenshot from 2024-01-10 17-03-44.png"
+        />
+        <div id="text">
+          <p>📍 Studying: Web Programming at ETIC Algarve</p>
+          <br />
+          <p>
+            🌐 My Journey in Tech: Hello! I'm Afonso Caboz, a passionate web
+            developer in the making. At 22, my journey in the tech world is
+            fueled by a relentless drive to innovate and create. Currently, I'm
+            baking my skills in web programming at ETIC Algarve, Faro where I'm
+            not just learning the theories but also putting them into practice.
+          </p>
+          <br />
+          <p>
+            🔍 Why Web Programming? My fascination with web programming stems
+            from its endless possibilities and the joy of turning ideas into
+            reality. The web is a canvas where creativity meets functionality,
+            and I'm excited to be a part of this ever-evolving field.
+          </p>
+          <br />
+          <p>
+            🚀 Future Goals: As I continue my educational journey, my aim is to
+            deepen my knowledge in these technologies and explore new ones. I'm
+            eager to contribute to impactful projects, collaborate with
+            like-minded individuals, and keep growing as a web developer.
+          </p>
+        </div>
+      </section>
+      <section id="portfolio">
+        <div class="content">
+          <h1>Portfolio</h1>
+          <img id="background-h1-2" src="Images/Group 36.png" />
+          <div id="text-portfolio">
+            <p>Each project is a unique piece of development 🧩</p>
+            <br />
+            <p>Technical Skills:</p>
+            <br />
+            <div id="technical-skills">
+              <p>• Languages: JavaScript, Python</p>
+              <p>• Web Development: HTML5, CSS3, React, Node.js</p>
+              <p>• Database Management: SQL</p>
+              <p>• Tools & Platforms: Git, GitHub, Visual Studio Code</p>
+            </div>
+            <br />
+            <p>Check out my projects:</p>
+            <div class="slider">
+              <a style="cursor: pointer" onclick="navigate(0)">1</a>
+              <a style="cursor: pointer" onclick='myScroll("slide-2", 390)'
+                >2</a
+              >
+              <a style="cursor: pointer" onclick='myScroll("slide-3", 390)'
+                >3</a
+              >
+              <a style="cursor: pointer" onclick='myScroll("slide-4", 390)'
+                >4</a
+              >
+              <a style="cursor: pointer" onclick='myScroll("slide-5", 390)'
+                >5</a
+              >
+
+              <div class="slides">
+                <div id="slide-1">
+                  <img src="Images/Carrousel/01.jpg" />
+                </div>
+                <div id="slide-2">
+                  <img src="Images/Carrousel/02.jpg" />
+                </div>
+                <div id="slide-3">
+                  <img src="Images/Carrousel/03.jpg" />
+                </div>
+                <div id="slide-4">
+                  <img src="Images/Carrousel/04.jpg" />
+                </div>
+                <div id="slide-5">
+                  <img src="Images/Carrousel/05.jpg" />
+                </div>
+              </div>
+            </div>
+            <img src="" />
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <h1>Contact</h1>
+        <img id="background-h1-3" src="Images/Group 36.png" />
+        <div>
+          <p>Name</p>
+          <input />
+        </div>
+        <div>
+          <p>Email</p>
+          <input />
+        </div>
+        <div>
+          <label for="message" style="display: grid; padding-bottom: 1vw"
+            >Message</label
+          >
+          <textarea
+            style="width: 40vw; height: 8vw"
+            id="message"
+            style="height: 6vw"
+          ></textarea>
+        </div>
+        <button id="send">Send</button>
+      </section>
+    </main>
+    <footer>
+      <div id="contact-footer">
+        <a><img src="Images/Tech Stack/github.png" /></a>
+        <a><img src="Images/Tech Stack/linkedin.png" /></a>
       </div>
-    </section>
-    <section id="portfolio">
-      <div>
-        <h1 id="title">Portfolio</h1>
-        <p id="text"></p>
-        <img src="" />
-        <script></script>
-      </div>
-    </section>
-    <section id="contact">
-      <h1>Contact</h1>
-      <input />
-    </section>
+      <p>Copyright © 2024. All rights are reserved</p>
+      <img id="footer-image" src="Images/Vector.png" />
+    </footer>
+    <script src="main.js"></script>
+    <script>
+      function myScroll(id, difference = 0) {
+        const element = document.getElementById(id);
+        const top = element.offsetTop;
+
+        window.scrollTo(0, top - difference);
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   </body>
 </html>
