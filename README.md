@@ -12,7 +12,7 @@ My Work:.
 
 In this portfolio, you'll find a diverse range of projects:
 
-	Games: Interactive and engaging, these projects reflect my first projects in python.
+	Games: Interactive and engaging, these games reflect my first projects in python.
 	Apps: From utility to entertainment, my app projects are designed with user experience and functionality in mind.
 	Web Projects: These encompass a variety of websites and web applications, showcasing my ability to create responsive, user-friendly, and aesthetically pleasing digital solutions.
 
