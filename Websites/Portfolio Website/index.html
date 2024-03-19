@@ -5,26 +5,33 @@
     <title>Caboz Portfolio</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
+    <script type="module" src="main.js"></script>
+    <link rel="icon" href="Images/Logo.png" type="image/png" />
   </head>
   <body>
     <header id="navbar">
       <a href="#landing-page"><img id="logo" /></a>
       <div id="menu">
-        <a style="cursor: pointer" onclick='myScroll("about", 210)'>About</a>
-        <a style="cursor: pointer" onclick="myScroll('portfolio', 210)">
-          Projects</a
+        <a
+          class="about"
+          style="cursor: pointer"
+          onclick='myScroll("about", 210)'
         >
-        <a style="cursor: pointer" onclick="myScroll('contact', 210)"
-          >Contact</a
+          About
+        </a>
+        <a
+          class="projects"
+          style="cursor: pointer"
+          onclick="myScroll('portfolio', 210)"
         >
+          Projects
+        </a>
+        <a
+          class="contact"
+          style="cursor: pointer"
+          onclick="myScroll('contact-container', 210)"
+          >Contact
+        </a>
       </div>
     </header>
     <section id="landing-page">
@@ -39,7 +46,9 @@
           <li><img src="Images/Tech Stack/react.png" /></li>
           <li><img src="Images/Tech Stack/Python.png" /></li>
         </ul>
-        <a href="#portfolio"><button>Portfolio</button></a>
+        <a href="#portfolio" onclick="myScroll('portfolio', 180)">
+          <button>Portfolio</button>
+        </a>
       </div>
     </section>
     <main id="main-content">
@@ -86,83 +95,84 @@
             <p>Technical Skills:</p>
             <br />
             <div id="technical-skills">
-              <p>• Languages: JavaScript, Python</p>
+              <p>• Languages: JavaScript, Bash, Python</p>
               <p>• Web Development: HTML5, CSS3, React, Node.js</p>
               <p>• Database Management: SQL</p>
-              <p>• Tools & Platforms: Git, GitHub, Visual Studio Code</p>
+              <p>
+                • Tools & Platforms: Git, GitHub, Docker, Visual Studio Code
+              </p>
             </div>
             <br />
             <p>Check out my projects:</p>
-            <div class="slider">
-              <a style="cursor: pointer" onclick="navigate()">1</a>
-              <a style="cursor: pointer" onclick='myScroll("slide-2", 390)'
-                >2</a
-              >
-              <a style="cursor: pointer" onclick='myScroll("slide-3", 390)'
-                >3</a
-              >
-              <a style="cursor: pointer" onclick='myScroll("slide-4", 390)'
-                >4</a
-              >
-              <a style="cursor: pointer" onclick='myScroll("slide-5", 390)'
-                >5</a
-              >
-
-              <div class="slides">
-                <div id="slide-1">
-                  <img src="Images/Carrousel/01.jpg" />
-                </div>
-                <div id="slide-2">
-                  <img src="Images/Carrousel/02.jpg" />
-                </div>
-                <div id="slide-3">
-                  <img src="Images/Carrousel/03.jpg" />
-                </div>
-                <div id="slide-4">
-                  <img src="Images/Carrousel/04.jpg" />
-                </div>
-                <div id="slide-5">
-                  <img src="Images/Carrousel/05.jpg" />
-                </div>
+            <div id="container">
+              <div id="image-container"></div>
+              <div id="buttons">
+                <button id="left">Previous</button>
+                <!-- <button id="info">Info</button> -->
+                <button id="right">Next</button>
               </div>
             </div>
-            <img src="" />
           </div>
         </div>
       </section>
-      <section id="contact">
-        <h1>Contact</h1>
-        <img id="background-h1-3" src="Images/Group 36.png" />
-        <div>
-          <p>Name</p>
-          <input />
-        </div>
-        <div>
-          <p>Email</p>
-          <input />
-        </div>
-        <div>
-          <label for="message" style="display: grid; padding-bottom: 1vw"
-            >Message</label
-          >
+
+      <section id="contact-container">
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="contact-left"
+        >
+          <div class="contact-left-title">
+            <h2>Get in touch</h2>
+            <hr />
+          </div>
+          <input
+            type="hidden"
+            name="access_key"
+            value="13d31de0-9032-4f91-903a-6ef4d0fcf6df"
+          />
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            class="contact-inputs"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            class="contact-inputs"
+            required
+          />
           <textarea
-            style="width: 40vw; height: 8vw"
-            id="message"
-            style="height: 6vw"
+            name="message"
+            placeholder="Your Message"
+            class="contact-inputs"
           ></textarea>
-        </div>
-        <button id="send">Send</button>
+          <button type="submit">
+            Send <img src="Images/arrow_icon.png" />
+          </button>
+        </form>
+        <!-- <div class="contact-right"><img src="assets/right_img.png" /></div> -->
       </section>
     </main>
     <footer>
       <div id="contact-footer">
-        <a><img src="Images/Tech Stack/github.png" /></a>
-        <a><img src="Images/Tech Stack/linkedin.png" /></a>
+        <a id="github" href="https://github.com/CodeZobac" target="_blank">
+          <img src="Images/Tech Stack/github.png" />
+        </a>
+        <a
+          id="linkedin"
+          href="https://www.linkedin.com/in/afonsocaboz/"
+          target="_blank"
+        >
+          <img src="Images/Tech Stack/linkedin.png" />
+        </a>
       </div>
       <p>Copyright © 2024. All rights are reserved</p>
       <img id="footer-image" src="Images/Vector.png" />
     </footer>
-    <script src="main.js"></script>
     <script>
       function myScroll(id, difference = 0) {
         const element = document.getElementById(id);
@@ -171,6 +181,5 @@
         window.scrollTo(0, top - difference);
       }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   </body>
 </html>
