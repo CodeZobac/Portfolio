@@ -152,10 +152,12 @@ class Game_kniffel:
         while True:
             self.print_game()
             self.throw_dice()
+            self.calculate_score(self.current_category)
             self.print_game()
             self.reset_dice()
             self.set_category(0)
             self.next_player()
+            self.current_category += 1
 
 
 game = Game_kniffel()

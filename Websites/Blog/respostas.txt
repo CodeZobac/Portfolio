@@ -1,0 +1,4 @@
+O script verifica se não existe uma pasta com o nome fornecido, caso não exista cria uma pasta com o nome example_folder, se existir cria uma pasta com o nome example_folder_02
+O script verifica se o ficheiro não existe na pasta atual. Se o ficheiro não existir o script cria o ficheiro example_file.txt e escreve a string fornecida lá dentro . Se o ficheiro já exestir o script adiciona a string fornecida no final do ficheiro existente.
+O script verifica se o ficheiro em questão tem permissão de escrita para quem está a utilizar a máquina, se tiver o script sobrescreve o conteúdo do ficheiro com a string "Conteúdo inicial" 
+O shebang diz ao sistema para usar o Bash para interpretar o script.
